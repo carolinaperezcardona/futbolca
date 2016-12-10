@@ -1,0 +1,8 @@
+.ilike-blue-container {
+    @extend .blue, .pink lighten-1;
+  }
+
+  .ilike-blue-container {
+    @extend .blue-text, .text-pink lighten-1;
+  }
+  
