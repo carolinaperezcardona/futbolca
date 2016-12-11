@@ -1,13 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav>
-  <div class="nav-wrapper">
-    <a href="" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">          
-      <li>
-          <a  (click)="listarCursos()"
-              class="waves-effect waves-light btn">
-              Ver los cursos existentes
-          </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="nav-wrapper #ffe082 amber lighten-3">
+      <a href="#!" class="brand-logo"><i class="material-icons">perm_identity</i>FUTBOLISTA</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons left">cloud</i></a>
+      <ul class="right hide-on-med-and-down">
+         <li (click)="listarfutbolistas()"><a class="waves-effect waves-light btn">MOSTRAR TODOS LOS JUGADORES
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+          
+
+<ul class="collection with-header" id="listarfutbol" *ngFor="let futbolista of futbolList">
+        <li class="collection-header"><h4>NOMBRE JUGADOR: {{futbolista.nombre}}  {{futbolista.apellido}}</h4></li>
+        <li class="collection-item">
+          Cedula: {{futbolista.cedula}}<br>
+          Posicion: {{futbolista.posicion}}<br>
+          Peso: {{futbolista.peso}}<br>
+          Talla: {{futbolista.talla}}<br>
+        </li>
+        
+</ul>
+            
+
+          
+<div class="col s12 m8 l6"> <!-- Note that "m8 l9" was added -->      
+      <futbol>
+      </futbol>
+</div>

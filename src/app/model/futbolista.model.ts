@@ -1,4 +1,4 @@
-export class futbolista
+export class futbolist
 {
     id:number;
     nombre: string;

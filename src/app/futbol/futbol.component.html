@@ -1,3 +1,114 @@
-<p>
-  futbol works!
-</p>
+
+<div class="row">
+   <form class="col s10" #formfutbol="ngForm" novalidate>
+     <div class="row">
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix">supervisor_account</i>
+            <input  id="nombre" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!nombreTxt.valid"
+                    name="nombre"
+                    #nombreTxt="ngModel"
+                    [(ngModel)]="futbolACrear.nombre"
+                    required>
+
+            <label  for="nombre"                    
+                    data-error="El nombre es requerido" 
+                    data-success="continuar">Nombre</label>            
+        </div>
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix">supervisor_account</i>
+            <input  id="apellido" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!apellidoTxt.valid"
+                    name="apellido"
+                    #apellidoTxt="ngModel"
+                    [(ngModel)]="futbolACrear.apellido"
+                    required>
+
+            <label  for="apellido"                    
+                    data-error="El apellido es requerido" 
+                    data-success="Ok">Apellido</label>     
+        </div>    
+     </div>
+     <div class="row">
+        <div class="input-field col s5">
+            <i class="material-icons prefix">assignment_ind</i>
+            <input  id="cedula" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!cedulaTxt.valid"
+                    name="cedula"
+                    #cedulaTxt="ngModel"
+                    [(ngModel)]="futbolACrear.cedula"
+                    required>
+
+            <label  for="cedula"                    
+                    data-error="La cedula es requerida" 
+                    data-success="Ok">Cedula</label>            
+        </div>
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="talla" 
+            type="text" 
+            class="validate"
+             [class.invalid]="!tallaTxt.valid"
+              name="talla"
+             #tallaTxt="ngModel"
+            [(ngModel)]="futbolACrear.talla"
+            required>
+        <label for="talla" 
+            data-error="La talla es requerida" 
+            data-success="continuar">talla</label>
+        </div>
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix">thumb_up</i>
+            <input id="peso" 
+            type="text"
+            class="validate"
+            [class.invalid]="!pesoTxt.valid"
+              name="peso"
+             #pesoTxt="ngModel"
+            [(ngModel)]="futbolACrear.peso"
+            required>
+        <label for="peso" 
+            data-error="El peso es requerido" 
+            data-success="continuar">peso</label>
+        </div>   
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix">done</i>
+            <input id="posicion" 
+            type="text" 
+            class="validate"
+            [class.invalid]="!posicionTxt.valid"
+              name="posicion"
+             #posicionTxt="ngModel"
+            [(ngModel)]="futbolACrear.posicion"
+            required>
+            <label for="posicion" 
+            data-error="La posicion es requerida" 
+            data-success="valkido">posicion</label>
+        </div>             
+     </div>
+     <div class="row">
+        <div class="col s10">
+          <br/>
+          <button class="btn waves-effect waves-light" 
+                  type="submit" 
+                  name="action"
+                  [disabled]="!formfutbol.valid"
+                  (click)="Guardarfut()">
+             Guardar
+            <i class="material-icons right">send</i>            
+          </button>
+        </div>
+     </div>          
+    </form>  
+</div>
